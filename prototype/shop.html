@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Header</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    </head>
+    <style>
+        body
+        {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+.container
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+    padding: 10px;
+
+}
+.nav a
+{
+    margin-left: 23px;
+    text-decoration: none;
+    color: black;
+}
+.icons i
+{
+    margin-left: 15px;
+}
+.p1
+{
+    margin-left: 30px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.filter-section {
+  width: 30%;
+  
+  padding: 20px;
+  
+  margin: 20px;
+}
+
+.filter-section h3 {
+  margin-top: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+.filter-section hr
+{
+    width: 300px;
+}
+.right-section {
+  width: 70%;
+}
+.right-section {
+  position: absolute;
+  top: 150px;
+  right: 0;
+  width: 70%;
+}
+
+.right-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.color-boxes {
+  display: flex;
+  justify-content: stretch;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  margin-left: 15px;
+  padding: 0;
+
+}
+
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  grid-gap: 20px;
+  padding: 20px;
+  width: 70%;
+  
+}
+
+.product-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  
+}
+.btn
+{
+  padding: 10px;
+  width: 250px;
+  text-align: center;
+  border: 1px solid black;
+  background-color: white;
+}
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: #337ab7;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+  margin: 0 5px;
+}
+
+.pagination a.active {
+  background-color: #000; /* Change background color to black */
+  color: white;
+  border: 1px solid #000;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination .prev, .pagination .next {
+  padding: 8px 10px; /* Adjust padding for prev/next buttons */
+}
+.down
+{
+  
+  text-align: center;
+
+  
+}
+.container9 {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #666;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  color: white;
+  height: 400px; 
+  padding: 40px;
+}
+.container9 button
+{
+    padding: 10px;
+    border: 2px solid white;
+    background-color: #666;
+    color: white;
+    width: 300px;
+}
+.left-part {
+  
+  padding: 20px;
+}
+
+.right-part {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px;
+  position: relative;
+}
+
+.right-part::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 1px;
+  background-color: #ddd;
+}
+
+.right-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+.foot 
+{
+  
+  margin-left: 320px;
+  margin-right: 30px;
+}
+.foot hr
+{
+  width: 600px;
+}
+.foot a
+{
+
+color: black;
+text-align: center;
+}
+    </style>
+    <body>
+        <div class="container">
+            <div class="logo">
+                <img src="img.jpg" alt="logo">
+
+            </div>
+            <div class="nav">
+                <a href="#home">Home</a>
+                <a href="#home">Shop</a>
+                <a href="#home">About</a>
+                <a href="#home">Contact</a>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-instagram"></i>
+            </div>
+        </div>
+        <p class="p1">Home / Shop
+
+        </p>
+        <form>
+        <h5 style="margin-left: 25px;">Showing 120 items</h5>
+            <div class="filter-section">
+            <hr>
+              <h5>Category</h5>
+              <label><input type="checkbox" name="category" value="Electronics">Dinnerware</label>
+              <label><input type="checkbox" name="category" value="Fashion">Ceramic</label>
+              <label><input type="checkbox" name="category" value="Home Decor">Furniture</label>
+              <label><input type="checkbox" name="category" value="Electronics">Decor Art</label>
+              <label><input type="checkbox" name="category" value="Fashion">Gift Sets</label>
+              
+            </div>
+            <div class="filter-section">
+            <hr>
+              <h5>Price Range</h5>
+              <label><input type="checkbox" name="price-range" value="Under $10">₹0-₹100</label>
+              <label><input type="checkbox" name="price-range" value="$10-$50">₹100-₹200</label>
+              <label><input type="checkbox" name="price-range" value="Over $50">₹200-₹300</label>
+              <label><input type="checkbox" name="price-range" value="Under $10">₹300-₹400</label>
+              <label><input type="checkbox" name="price-range" value="$10-$50">>₹500</label>
+              
+
+            </div>
+            <h5 style="margin-left: 30px;">Colors</h5>
+            <div class="color-boxes" style="margin-left: 30px;">
+              
+              
+              <div class="box" style="border: 1px solid black;"></div>
+              <div class="box" style="background-color: orange"></div>
+              <div class="box" style="background-color: powderblue"></div>
+              <div class="box" style="background-color: tomato"></div>
+              <div class="box" style="background-color: gray"></div>
+            </div>
+
+             <div class="filter-section">
+            <hr>
+              <h5>Tags</h5>
+              <label><input type="checkbox" name="price-range" value="Under $10">Dinnerware</label>
+              <label><input type="checkbox" name="price-range" value="$10-$50">Ceramic</label>
+              <label><input type="checkbox" name="price-range" value="Over $50">Furniture</label>
+              <label><input type="checkbox" name="price-range" value="Under $10">Decor Art</label>
+              <label><input type="checkbox" name="price-range" value="$10-$50">Gift Sets</label>
+             
+
+            </div>
+          </form>
+
+         
+          
+          <div class="right-section">
+            <p class="down">Sort by : Name     v</p><br>
+            <div class="product-gallery">
+              
+              <div class="product-card">
+                
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                            <div class="product-card">
+                <figure>
+                <img src="img/cer10.jpg" alt="Image 1">
+                <figcaption>SMALL ECRU CREAMIC<br> ₹500
+                </figcaption>
+                <p>lorem ipsum dolor sit amet conse bolli<br>
+                     </p>
+                     <button class="btn">ADD TO CART</button>
+            </figure>
+            
+        
+              </div>
+                      </div>
+          </div>
+                 
+                        
+                    
+                
+            </div>
+          </div><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <div class="pagination">
+            <a href="#" class="prev">&lt;</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#" class="next">&gt;</a>
+          </div>
+          <br><br>
+          <div class="container9">
+            <div class="left-par">
+              <h1>MOON</h1>
+              <p>Lorem ipsum dolor at conse</p>
+              <p>Lorem ipsum dolor at conse</p><br><br>
+            <button>GET STARTED-></button>
+              
+            </div>
+          
+            <div class="right-part">
+              <div class="right-item9"><b>ABOUT US</b><br><br>
+            <br>Mission<br>
+        <br>Our Team<br>
+    <br>Awards<br><br>Testimonials<br><br>Privacy Policy<br></div>
+              <div class="right-item9"><b>CATEGORY</b><br><br><br>
+              Dinnerware<br><br>Ceramic<br><br>Furniture<br><br>Decor Art<br><br>GMS Set</div>
+              <div class="right-item9"><b>ADDRESS</b><br><br>
+              59,Middle Point Rd<br>
+            SanFrancisco,80412<br><br><br>
+          <b>CONTACT</b><br><br>
+        +91 99999999999</div>
+            <br>
+            
+            </div>
+            
+            <footer class="foot">
+              <hr style="border-top: 1px solid white; border-bottom: none;">
+    
+              Copyright &copy; 2023 Moon | All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a>
+            </footer>
+          </div>
+    </body>
+        
+
+</body>
+</html>
